@@ -1,0 +1,11 @@
+<div className="mainContainer">
+        <div className={styles.colunaCentralizada}>
+          <img src="images/eadcursos.png" alt="Imagem EAD Cursos" />
+          <p>
+            A Quality Seg é uma empresa especializada em Engenharia de Segurança e Medicina do
+            trabalho com atuação desde o ano de 2008, trabalhando e desenvolvendo política
+            sustentável em gestão ocupacional.
+            {/* O restante do conteúdo */}
+          </p>
+        </div>
+      </div>

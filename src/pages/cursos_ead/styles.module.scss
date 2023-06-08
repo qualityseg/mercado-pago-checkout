@@ -1,0 +1,122 @@
+
+.treatments {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--s32);
+
+  .treatmentsItem {
+    background-color: none;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    padding: var(--s32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      margin-top: 62px; // 30px da borda mais 32px
+      margin-bottom: 32px;
+      font-family: "IBM Plex Sans Hebrew", Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: var(--s20);
+      text-align: center;
+      color: var(--blue-black);
+    }
+
+    p {
+      line-height: 1.5;
+
+      & + p {
+        margin-top: var(--s16);
+      }
+    }
+
+    .description {
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 0 1rem;
+      color: var(--blue-black);
+
+      &::-webkit-scrollbar {
+        background: none;
+        border-radius: 3px;
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #e7e7e7;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.images {
+  margin-bottom: 90px;
+  color: var(--blue-black);
+  margin-top: 150px;
+  .imagesContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--s24);
+    margin-top: var(--s64);
+    color: var(--blue-black);
+
+    .image {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 200px;
+      width: 100%;
+      margin-bottom: var(--s16);
+      background-color: transparent;
+      background-image: none !important;
+    }
+  }
+}
+
+.learnMoreButton {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #08AC5C;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    border: 1px solid darkgreen;
+  }
+}
+
+
+
+
+
+@media (max-width: 850px) {
+  .treatments {
+    grid-template-columns: 1fr;
+
+    .treatmentsItem {
+      padding: var(--s32) var(--s16);
+    }
+  }
+
+  .images {
+    .imagesContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .images {
+    .imagesContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+}

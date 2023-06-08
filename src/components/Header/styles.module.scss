@@ -1,0 +1,146 @@
+.blackBar {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  height: 35px;
+  background-color: #27242A;
+}
+
+.social {
+        a + a {
+          margin-left: var(--s24);
+        }
+      }
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: #01A982;
+  padding: var(--s08) 0;
+  z-index: 1000;
+  
+
+  div {
+    color: var(--blue-black);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    a {
+      padding: 0.5rem;
+      transition: 0.2s ease;
+
+      & + a {
+        margin-left: var(--s32);
+      }
+
+      &:hover {
+        color:var(--blue-dark);
+      }
+    }
+  }
+
+  .menuMobile {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 84px;
+    right: 0;
+    background-color: var(--blue-black);
+    color: #f1f7f3;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s ease;
+
+    ul {
+      li {
+        & + li {
+          margin-top: var(--s16);
+        }
+
+        a {
+          font-weight: bold;
+          display: block;
+          padding: 0.5rem 0;
+          margin: 0.8rem 2rem;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+          transition: 0.2s ease;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+
+    &.active {
+      height: 70vh;
+      visibility: visible;
+    }
+  }
+}
+
+.btnMenuMobile {
+  display: none;
+  background: none;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  border: none;
+  color: #054561;
+  cursor: pointer;
+
+  span {
+    margin-left: 15px;
+  }
+}
+
+.iconHamburguer {
+  width: 20px;
+  border-top: 2px solid var(--white);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s ease;
+  }
+}
+
+.menuOpen .iconHamburguer {
+  border-top: transparent;
+}
+.menuOpen .iconHamburguer::before {
+  transform: rotate(135deg);
+}
+.menuOpen .iconHamburguer::after {
+  transform: rotate(-135deg);
+  position: relative;
+  top: -7px;
+}
+
+@media (max-width: 980px) {
+  .menu,
+  .btnAgendar {
+    display: none !important;
+  }
+  .btnMenuMobile {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 981px) {
+  .menuMobile {
+    display: none;
+  }
+}

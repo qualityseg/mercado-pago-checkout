@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  // colors
+  --white: #fafbfb;
+  --blue-main: #08ac5c;
+  --blue-suco: #021720;
+  --blue-black: #021720;
+  --blue-bg: #1399be;
+  --blue-dark: #021720;
+  --bg: #fafcfc;
+  --black-main: #021720;
+  --golden: #f1d47b;
+
+  // spacing or size
+  --s08: 0.5rem;
+  --s16: 1rem;
+  --s18: 1.125rem;
+  --s20: 1.25rem;
+  --s24: 1.5rem;
+  --s32: 2rem;
+  --s42: 2.625rem;
+  --s64: 4rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", -apple-system, "Segoe UI", Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(bg);
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.mainContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 var(--s24);
+}
+
+.title {
+  font-family: "Zen Antique", Georgia, "Times New Roman", Times, serif;
+  font-size: var(--s64);
+  line-height: 1.2;
+
+  strong {
+    color: var(--blue-suco);
+  }
+  strong2 {
+    color: var(--blue-black);
+  }
+
+  
+}
+
+@media (max-width: 1350px) {
+  .title {
+    font-size: var(--s42);
+  }
+}
+
+// Animações
+.animeOpacity {
+  opacity: 0;
+  animation: anime 0.5s forwards;
+}
+
+.animeDown {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: anime 0.3s forwards;
+}
+
+@keyframes anime {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

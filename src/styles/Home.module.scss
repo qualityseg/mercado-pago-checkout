@@ -1,0 +1,410 @@
+// .schedule {
+//   background-color: #090e10;
+//   color: var(--white);
+//   text-align: center;
+//   font-size: var(--s16);
+//   padding: var(--s16);
+// }
+
+.hero {
+  background-color: var(--blue-main);
+  padding: 90px 0;
+  width: 100%;
+  margin-top: 20px;
+
+  .heroWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s24);
+  }
+
+  .leftContent {
+    max-width: 655px;
+
+    p {
+      font-size: var(--s24);
+      margin: var(--s32) 0;
+    }
+  }
+
+  .btnWrap {
+    margin-top: var(--s64);
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: var(--s18);
+      margin-left: var(--s32);
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.about {
+  padding: 90px 0;
+
+  .aboutContent {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .aboutRightContent {
+    max-width: 579px;
+
+    h3 {
+      font-family: "Zen Antique", Georgia, "Times New Roman", Times, serif;
+      font-size: var(--s42);
+      line-height: 1.2;
+
+      strong {
+        color: var(--blue-main);
+      }
+
+      strong2 {
+        color: var(--blue-black);
+      }
+    
+    }
+
+    p {
+      margin: var(--s32) 0 var(--s64) 0;
+      line-height: 1.5;
+      strong {
+        color: var(--blue-main);
+      }
+
+      strong2 {
+        color: var(--blue-black);
+      }
+
+    }
+  }
+}
+
+.treatments {
+  background-color: var(--blue-bg);
+  margin-top: 30px;
+  padding: 60px 0;
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .treatmentsWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--s16);
+  }
+
+  .treatmentItem {
+    padding: var(--s32);
+    background-color: #bee6f6;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.12);
+
+    .icon {
+      background-color: var(--white);
+      border-radius: 0 50% 0 50%;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-family: "Zen Antique", Georgia, "Times New Roman", serif;
+      font-size: var(--s24);
+      margin: var(--s24) 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: var(--s24);
+      font-weight: bold;
+      font-size: var(--s18);
+
+      &::after {
+        display: inline-block;
+        content: url("../../public/icons/seta.svg");
+        margin-left: 12px;
+        transition: 0.2s ease;
+      }
+
+      &:hover::after {
+        transform: translateX(8px);
+      }
+    }
+  }
+
+  .treatmentsBtnWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--s42);
+  }
+}
+
+.doctor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s32);
+  padding: 90px 24px;
+
+  h2,
+  p {
+    text-align: left;
+  }
+
+  .doctorContent {
+    max-width: 660px;
+    margin-right: var(--s64);
+
+    .doctorText {
+      line-height: 1.5;
+      margin: var(--s32) 0;
+    }
+
+    a {
+      display: inline-block;
+      font-weight: bold;
+      font-size: var(--s24);
+
+      &::after {
+        display: inline-block;
+        content: url("../../public/icons/seta.svg");
+        margin-left: 12px;
+        transition: 0.2s ease;
+      }
+
+      &:hover::after {
+        transform: translateX(8px);
+      }
+    }
+  }
+}
+
+.patients {
+  background-color: var(--blue-bg);
+  width: 100%;
+  padding: 60px 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  .patientsList {
+    margin-top: 60px;
+
+    li {
+      max-width: 900px;
+      display: none;
+    }
+
+    p {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: var(--s20);
+      line-height: 1.5;
+    }
+
+    span {
+      display: block;
+      margin-top: var(--s24);
+      font-weight: bold;
+      opacity: 0.5;
+      font-size: var(--s18);
+    }
+
+    .active {
+      display: block;
+    }
+  }
+
+  .slideBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--s32);
+
+    button {
+      width: 14px;
+      height: 14px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: var(--white);
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+
+      &.active {
+        background-color: var(--blue-main);
+      }
+
+      & + button {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .hero {
+    .leftContent {
+      max-width: 600px;
+      p {
+        font-size: var(--s18);
+      }
+    }
+
+    .imgHero {
+      width: 400px;
+    }
+  }
+
+  .about {
+    .imgAbout {
+      width: 500px;
+      margin-left: 30px;
+    }
+    .aboutContent {
+      flex-wrap: wrap;
+      gap: 30px;
+
+      h3 {
+        font-size: 36px !important;
+      }
+
+      .aboutRightContent {
+        margin-right: 30px;
+        max-width: 460px;
+      }
+    }
+  }
+
+  .doctor {
+    .doctorContent {
+      max-width: 500px;
+    }
+
+    img {
+      width: 400px !important;
+    }
+  }
+}
+
+@media (max-width: 1066px) {
+  .hero {
+    .heroWrap {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .imgHero {
+      margin-top: var(--s64);
+    }
+
+    .btnWrap {
+      a {
+        margin: auto;
+      }
+    }
+  }
+
+  .about {
+    .aboutContent {
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .aboutRightContent {
+        max-width: 85%;
+      }
+    }
+
+    .imgAbout {
+      width: 400px;
+      margin-bottom: var(--s32);
+    }
+  }
+
+  .doctor {
+    flex-wrap: wrap;
+    .doctorContent {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .treatments .treatmentsWrap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .doctor {
+    .doctorContent {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    img {
+      margin-top: var(--s32) !important;
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .hero {
+    h1 {
+      font-size: 36px;
+    }
+
+    .btnWrap {
+      gap: 20px;
+      flex-wrap: wrap;
+
+      span {
+        margin: 20px auto 0 auto;
+      }
+    }
+
+    .imgHero {
+      margin-top: var(--s32);
+    }
+  }
+
+  .about {
+    .aboutContent {
+      .aboutRightContent {
+        margin-right: 0;
+        h3 {
+          text-align: left;
+          font-size: 32px !important;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    .imgAbout {
+      margin-left: 0;
+      margin-bottom: var(--s32);
+      max-width: 300px;
+    }
+  }
+
+  .treatments .treatmentsWrap {
+    grid-template-columns: 1fr;
+  }
+}

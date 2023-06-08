@@ -1,0 +1,14 @@
+.myTitle {
+  text-align: center;
+
+  p {
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  .subtitle {
+    font-size: var(--s24);
+    color: var(--blue-main);
+  }
+}

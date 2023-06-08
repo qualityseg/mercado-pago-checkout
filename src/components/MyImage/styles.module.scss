@@ -1,0 +1,19 @@
+.image.right {
+  display: inline-flex;
+  box-shadow: 30px 30px 0px 0px var(--blue-main);
+  margin-right: 30px;
+}
+.image.left {
+  display: inline-flex;
+  box-shadow: -30px 30px 0px 0px var(--blue-main);
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .image.right {
+    box-shadow: 16px 16px 0px 0px var(--blue-main);
+  }
+  .image.left {
+    box-shadow: -16px 16px 0px 0px var(--blue-main);
+  }
+}

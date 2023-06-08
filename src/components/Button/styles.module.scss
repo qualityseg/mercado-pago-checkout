@@ -1,0 +1,27 @@
+.button {
+  background-color: var(--blue-black);
+  color: var(--white);
+  font-size: var(--s18);
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s18);
+
+  &:hover {
+    box-shadow: 0 0 0 2px #d5f6ff, 0 0 0 4px var(--blue-main);
+  }
+}
+
+.buttonDark {
+  background-color: var(--blue-black);
+
+  &:hover {
+    box-shadow: 0 0 0 2px #c7ebf5, 0 0 0 4px var(--blue-black);
+  }
+}
